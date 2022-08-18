@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
-import CaughtUp from "./Components/Main/CaughtUp";
-import CheckList from "./Components/Main/CheckList";
-import Footer from "./Components/Footer";
+import Header from "./Components/Layout/Header";
+import TodoList from "./Components/TodoMain/TodoList";
+import Footer from "./Components/Layout/Footer";
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
       <section>
         <div className="flex flex-col bg-gray-200 rounded shadow-lg">
           <Header />
-          <CaughtUp />
-          <CheckList />
+          <TodoList />
         </div>
         <Footer />
       </section>

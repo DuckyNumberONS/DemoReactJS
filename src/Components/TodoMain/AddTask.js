@@ -9,7 +9,7 @@ export default function AddTask(props) {
     props.onSubmit({
       id: Math.floor(Math.random() * 1000),
       text: input,
-      isComplete:false,
+      isComplete: false,
     });
     setInput("");
   };
@@ -25,14 +25,12 @@ export default function AddTask(props) {
           type="text"
           placeholder="Add a todo"
           className="flex-1 px-2.5 bg-gray-200 placeholder-gray-500 focus:outline-none"
-          data-testid="task-input-field"
           onChange={handleChange}
         ></input>
         <button
           onClick={handleSubmit}
           type="submit"
           className="transition duration-200 ease-in-out text-gray-400 focus:outline-none hover:text-pink-500 text-lg px-2 cursor-pointer"
-          data-testid="task-submit-btn"
         >
           <svg
             stroke="currentColor"

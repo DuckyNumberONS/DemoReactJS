@@ -1,18 +1,21 @@
-import React, { useState } from "react";
-export default function AddTask(props) {
+import React, { useState, useCallback } from "react";
+function AddTask(props) {
   const [input, setInput] = useState("");
   const handleChange = (e) => {
     setInput(e.target.value);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.onSubmit({
-      id: Math.floor(Math.random() * 1000),
-      text: input,
-      isComplete: false,
-    });
-    setInput("");
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      props.onSubmit({
+        id: Math.floor(Math.random() * 1000),
+        text: input,
+        isComplete: false,
+      });
+      setInput("");
+    },
+    [input, props]
+  );
   return (
     <div className="mx-4 mt-6">
       <div
@@ -48,3 +51,4 @@ export default function AddTask(props) {
     </div>
   );
 }
+export default AddTask;

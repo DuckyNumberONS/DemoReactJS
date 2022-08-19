@@ -1,7 +1,6 @@
 import React from "react";
 
 function Todo({ todo, completeTodo, removeTodo }) {
-  // tinhs toan o day mat thoi gian, handle side effect
   return (
     <li
       className={`flex mt-4 items-center space-x-1 py-2.5 px-2.5 border-b border-gray-300 transition duration-300 ease-in no-underline text-gray-800 ${
@@ -9,15 +8,15 @@ function Todo({ todo, completeTodo, removeTodo }) {
       }`}
     >
       <input
-        onClick={() => completeTodo(todo.id)}
+        onClick={() => completeTodo(todo?.id)}
         name="completed-checkbox"
         type="checkbox"
         className=" w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       ></input>
-      <span className="flex-1 px-2 min-w-0 break-words">{todo.text}</span>
+      <span className="flex-1 px-2 min-w-0 break-words">{todo?.text}</span>
       <button
         className="transition duration-200 ease-in-out text-gray-400 hover:text-pink-500 focus:outline-none"
-        onClick={() => removeTodo(todo.id)}
+        onClick={() => removeTodo(todo?.id)}
       >
         <svg
           stroke="currentColor"

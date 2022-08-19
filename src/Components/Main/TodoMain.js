@@ -1,4 +1,4 @@
-import React, { useState, useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import AddTask from "./AddTask";
 import Todo from "./Todo";
 
@@ -28,13 +28,15 @@ export default function TodoList() {
 
   const completeTodo = useCallback(
     (id) => {
-      let updatedTodos = todos.map((todo) => {
-        if (todo.id === id) {
-          todo.isComplete = !todo.isComplete;
-        }
-        return todo;
-      });
-      setTodo(updatedTodos);
+      if (id) {
+        let updatedTodo = todos.length > 0 && todos.map((todo) => {
+          if (todo.id === id) {
+            todo.isComplete = !todo.isComplete;
+          }
+          return todo;
+        });
+        setTodo(updatedTodo);
+      }
     },
     [todos]
   );
@@ -43,14 +45,15 @@ export default function TodoList() {
     <>
       <AddTask onSubmit={addTodo} />
       <div className="mx-4 my-6 h-96 overflow-auto">
-        {todos.map((todo) => (
-          <Todo
-            key={todo.id}
-            todo={todo}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-          />
-        ))}
+        {todos.length > 0 &&
+          todos.length > 0 && todos.map((todo) => (
+            <Todo
+              key={todo.id}
+              todo={todo}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+            />
+          ))}
         {todos.length === 0 && (
           <p className="my-16 text-lg text-center text-gray-500">
             You're all caught up!

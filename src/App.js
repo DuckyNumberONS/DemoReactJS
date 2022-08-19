@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./Components/Layout/Header";
-import TodoList from "./Components/TodoMain/TodoList";
+import TodoMain from "./Components/Main/TodoMain";
 import Footer from "./Components/Layout/Footer";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <section>
         <div className="flex flex-col bg-gray-200 rounded shadow-lg">
           <Header />
-          <TodoList />
+          <TodoMain />
         </div>
         <Footer />
       </section>

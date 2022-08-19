@@ -17,7 +17,7 @@ const month = [
   "December",
 ];
 
-function Header() {
+const Header = () => {
   return (
     <header
       className="bg-todo-header-day bg-cover bg-center border-b-1 border-gray-300 px-4 py-6"

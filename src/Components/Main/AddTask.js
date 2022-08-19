@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from "react";
+import React, { useState, useCallback } from "react";
 
 const  AddTask = ({ onSubmit }) => {
   const [input, setInput] = useState("");
@@ -55,4 +55,4 @@ const  AddTask = ({ onSubmit }) => {
     </div>
   );
 }
-export default memo(AddTask);
+export default AddTask;

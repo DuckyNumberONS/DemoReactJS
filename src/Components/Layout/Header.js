@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 
 const date = new Date();
 const day = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -34,4 +34,4 @@ const Header = () => {
     </header>
   );
 }
-export default memo(Header);
+export default Header;

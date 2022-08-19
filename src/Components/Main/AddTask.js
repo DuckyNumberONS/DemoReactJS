@@ -1,11 +1,12 @@
 import React, { useState, useCallback, memo } from "react";
 
-function AddTask({ onSubmit }) {
+const  AddTask = ({ onSubmit }) => {
   const [input, setInput] = useState("");
 
   const handleChange = useCallback((e) => {
     setInput(e.target.value);
   },[]);
+  
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();

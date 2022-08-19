@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import AddTask from "./AddTask";
 import Todo from "./Todo";
 
-export default function TodoList() {
+function TodoMain() {
   const [todos, setTodo] = useState([]);
 
   const addTodo = useCallback(
@@ -72,3 +72,4 @@ export default function TodoList() {
     </>
   );
 }
+export default TodoMain

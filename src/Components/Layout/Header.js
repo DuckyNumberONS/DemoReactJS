@@ -22,7 +22,7 @@ function Header() {
     <header
       className="bg-todo-header-day bg-cover bg-center border-b-1 border-gray-300 px-4 py-6"
       style={{
-        backgroundImage: `url(https://react-todo-phix.netlify.app/static/media/header-day.1565fc4e.jpg)`,
+        backgroundColor: "black",
       }}
     >
       <h1 className="text-2xl text-white" data-testid="calendar-date">

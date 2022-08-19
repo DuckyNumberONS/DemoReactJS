@@ -1,5 +1,5 @@
-import React from "react";
-// import '/src/App.css'
+import React, { memo } from "react";
+
 const date = new Date();
 const day = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const month = [
@@ -34,4 +34,4 @@ function Header() {
     </header>
   );
 }
-export default Header;
+export default memo(Header);

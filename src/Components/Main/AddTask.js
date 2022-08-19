@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, memo } from "react";
 function AddTask(props) {
   const [input, setInput] = useState("");
   const handleChange = (e) => {
@@ -51,4 +51,4 @@ function AddTask(props) {
     </div>
   );
 }
-export default AddTask;
+export default memo(AddTask);

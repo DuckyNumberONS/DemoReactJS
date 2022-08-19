@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-function Todo({ todo, completeTodo, removeTodo }) {
+const Todo=({ todo, completeTodo, removeTodo })=>  {
   return (
     <li
       className={`flex mt-4 items-center space-x-1 py-2.5 px-2.5 border-b border-gray-300 transition duration-300 ease-in no-underline text-gray-800 ${
@@ -34,4 +34,4 @@ function Todo({ todo, completeTodo, removeTodo }) {
   );
 }
 
-export default Todo;
+export default memo(Todo);

@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import AddTask from "./AddTask";
 import Todo from "./Todo";
 
-function TodoMain() {
+const TodoMain = ()=>{
   const [todos, setTodo] = useState([]);
 
   const addTodo = useCallback(

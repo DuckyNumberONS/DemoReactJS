@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="pb-6 mt-6 text-center">
       <a

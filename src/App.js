@@ -4,7 +4,7 @@ import Header from "./Components/Layout/Header";
 import TodoMain from "./Components/Main/TodoMain";
 import Footer from "./Components/Layout/Footer";
 
-function App() {
+const App = () => {
   return (
     <div id="App" className="flex flex-col container max-w-md mx-auto md:pt-8">
       <section>

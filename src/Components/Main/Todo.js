@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import React from "react";
 
-const Todo=({ todo, completeTodo, removeTodo })=>  {
+const Todo = ({ todo, completeTodo, removeTodo }) => {
   return (
     <li
       className={`flex mt-4 items-center space-x-1 py-2.5 px-2.5 border-b border-gray-300 transition duration-300 ease-in no-underline text-gray-800 ${
@@ -32,6 +32,6 @@ const Todo=({ todo, completeTodo, removeTodo })=>  {
       </button>
     </li>
   );
-}
+};
 
-export default memo(Todo);
+export default Todo;

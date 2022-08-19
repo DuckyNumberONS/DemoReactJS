@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from "react";
+import React, { useState, useCallback} from "react";
 import AddTask from "./AddTask";
 import Todo from "./Todo";
 
@@ -72,4 +72,4 @@ const TodoMain = ()=>{
     </>
   );
 }
-export default memo(TodoMain)
+export default TodoMain

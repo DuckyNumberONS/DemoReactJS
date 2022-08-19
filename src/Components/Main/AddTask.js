@@ -1,21 +1,24 @@
 import React, { useState, useCallback, memo } from "react";
-function AddTask(props) {
+
+function AddTask({ onSubmit }) {
   const [input, setInput] = useState("");
-  const handleChange = (e) => {
+
+  const handleChange = useCallback((e) => {
     setInput(e.target.value);
-  };
+  },[]);
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
-      props.onSubmit({
+      onSubmit({
         id: Math.floor(Math.random() * 1000),
         text: input,
         isComplete: false,
       });
       setInput("");
     },
-    [input, props]
+    [input, onSubmit]
   );
+
   return (
     <div className="mx-4 mt-6">
       <div
